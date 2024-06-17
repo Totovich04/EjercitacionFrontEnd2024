@@ -9,10 +9,12 @@ const urlServidor = "http://localhost:4000"
 const urlResourceArticulos = urlServidor + "/api/articulos";
 const urlResourceArticulosFamilias = urlServidor + "/api/articulosfamilias";
 const urlResourceArticulosJWT = urlServidor + "/api/articulosjwt";
+const urlResourceEmpleados = urlServidor + "/api/empleados";
 
 export const config = {
     urlServidor,
     urlResourceArticulos,
     urlResourceArticulosFamilias,
     urlResourceArticulosJWT,
+    urlResourceEmpleados,
 }

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { NavLink} from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import AuthService from "../services/auth.service";
 
 
@@ -62,6 +62,10 @@ function Menu() {
                 Articulos JWT
               </NavLink>
             </li>
+            <li>
+              <NavLink className="nav-link" to="/empleados">
+                Empleados</NavLink>
+            </li>
 
 
             <li className="nav-item dropdown bg-dark">
@@ -99,29 +103,29 @@ function Menu() {
           </ul>
 
 
-            <ul className="navbar-nav ms-auto">
-              {usuarioLogueado && (
-                <li className="nav-item">
-                  <a className="nav-link" href="#!">Bienvenido: {usuarioLogueado}</a>
-                </li>
-              )}
+          <ul className="navbar-nav ms-auto">
+            {usuarioLogueado && (
               <li className="nav-item">
-                <NavLink className="nav-link" to="/login/Inicio">
-                  <span
-                    className={
-                      usuarioLogueado ? "text-warning" : "text-success"
-                    }
-                  >
-                    <i
-                      className={
-                        usuarioLogueado ? "fa fa-sign-out" : "fa fa-sign-in"
-                      }
-                    ></i>
-                  </span>
-                  {usuarioLogueado ? " Logout" : " Login"}
-                </NavLink>
+                <a className="nav-link" href="#!">Bienvenido: {usuarioLogueado}</a>
               </li>
-            </ul>
+            )}
+            <li className="nav-item">
+              <NavLink className="nav-link" to="/login/Inicio">
+                <span
+                  className={
+                    usuarioLogueado ? "text-warning" : "text-success"
+                  }
+                >
+                  <i
+                    className={
+                      usuarioLogueado ? "fa fa-sign-out" : "fa fa-sign-in"
+                    }
+                  ></i>
+                </span>
+                {usuarioLogueado ? " Logout" : " Login"}
+              </NavLink>
+            </li>
+          </ul>
         </div>
       </div>
     </nav>
@@ -129,4 +133,4 @@ function Menu() {
 }
 
 
-export {Menu};
+export { Menu };
